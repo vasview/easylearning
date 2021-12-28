@@ -1,0 +1,19 @@
+<header>
+  <div class="logo"><h4><%= link_to 'EasyLessons', root_path %></h4></div>
+  <div class="navbar">
+    <ul class="menu">
+      <li class='menu__item'><%= link_to 'Главная', root_path, class: 'menu__item-link', data: { 'turbolinks': 'false' } %></li>
+      <% if user_signed_in? %>
+        <li class='menu__item'></li>
+        <li class='menu__item'></li>
+      <% end %>
+      <li class='menu__item'></li>
+      <% if user_signed_in? %>
+        <li class='menu__item'><%= link_to 'Мой профиль', user_path(current_user), class: 'menu__item-link' %></li>
+        <li class='menu__item'><%= link_to 'Выход', destroy_user_session_url, method: :delete, class: 'menu__item-link' %></li>
+      <% else %>
+        <li class='menu__item'><%= link_to 'Вход', new_user_session_path, class: 'menu__item-link' %></li>
+      <% end %>
+    </ul>
+  </div>
+</header>

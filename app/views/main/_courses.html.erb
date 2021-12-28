@@ -1,0 +1,10 @@
+<% @courses.each do |course| %>
+  <div class="company__item-row-wrapper">
+      <div class="company__item-row" >
+        <span class="company__item-name"><%= course.title %></span>
+        <span class="company__item-category"><%= course.description %> </span>
+        <span class="company__item-interaction_result"><%= course.complexity %></span>
+      </div>
+    </div>
+  </div>
+<% end %>

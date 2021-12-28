@@ -1,0 +1,30 @@
+<div class="section_title-block">
+  <h2 class="main__title">Список курсов</h2>
+  <span class="section__link-add">
+  </span>
+  <div class="count__indicator">
+    <span class="count__indicator_all">Всего курсов : <strong><i><%= @courses.size %></i></strong> из них :</span>
+    <div class="count__indicator_sub">
+      <span>Открытых : <em><%=  %></em>, </span>
+      <span>Закрытых : <em><%=  %></em>, </span>
+    </div>
+  </div>
+</div>
+<div class="page__inner">
+  <div class="main__section">
+    <!-- <%= render 'sidebar' %> -->
+    <div class="company-list__section">
+      <div class="company__table-header">
+        <div class="company__item-header">
+          <span class="company__item-name">Название</span>
+          <span class="company__item-category">Краткое описание</span>
+          <span class="company__item-interaction_result">Сложность</span>
+        </div>
+        <div class="company__item-action-header">Просмотр</div>
+      </div>
+      <div class="company__table">
+        <%= render partial: 'courses' %>
+      </div>
+    </div>
+  </div>
+</div>
