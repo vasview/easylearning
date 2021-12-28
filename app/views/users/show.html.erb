@@ -1,0 +1,31 @@
+<h2>Kарточка пользователя: </h2>
+<p></p>
+
+<p>
+  <label for="user_first_name" class="form__label">Имя : </label>
+    <span class="data_text"><%= @user.first_name %></span>
+</p>
+<p>
+  <label for="user_middle_name" class="form__label">Отчество : </label>
+  <span class="data_text"><%= @user.middle_name %></span>
+</p>
+<p>
+  <label for="user_last_name" class="form__label">Фамилия : </label>
+  <span class="data_text"><%= @user.last_name %></span>
+</p>
+<p>
+  <label for="user_gender" class="form__label">Пол : </label>
+  <span class="data_text"><%= @user.gender %></span>
+</p>
+<p>
+  <label for="user_mobile" class="form__label">Мобильный телефон : </label>
+  <span class="data_text"><%= @user.mobile %></span>
+</p>
+<p>
+  <label for="user_email" class="form__label">Email : </label>
+    <span class="data_text"><%= @user.email %></span>
+</p>
+<p>
+    <%= link_to "Редактировать", edit_user_path(@user) %> |
+    <%= link_to "Удалить", user_path(@user), :confirm => "Вы уверены?", :method => :delete %>
+</p>
